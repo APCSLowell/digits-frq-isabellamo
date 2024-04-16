@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class Digits{
+public class Digits
+{
 
 	private ArrayList<Integer> digitList;
 
@@ -32,24 +33,4 @@ public class Digits{
 	public String toString() {
 		return digitList.toString();
 	}
-
-	public int countElectronicsByMaker(String maker) {
-        	int count = 0;
-        	
-		for (Gizmo gizmo : purchases) {
-            		if (gizmo.isElectronic() && gizmo.getMaker().equals(maker)) {
-                		count++;
-            		}
-        	}
-        	return count;
-    	}
-
-    	public boolean hasAdjacentEqualPair() {
-        	for (int i = 0; i < purchases.size() - 1; i++) {
-            		if (purchases.get(i).equals(purchases.get(i + 1))) {
-                		return true;
-            		}
-        	}
-        	return false;
-    	}
 }
